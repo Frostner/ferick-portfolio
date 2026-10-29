@@ -1,0 +1,12 @@
+﻿Case ID,Action,Expected,Evidence state
+GC-01,Admin sign-in,Dashboard loads and authorized GET succeeds,Render HTTP 200 login log supplied by student
+GC-02,Customer order in online demo,Order created and appears in admin workflow,Student confirmed online ordering works
+GC-03,Customer login/register,Correct user gets customer session,Automated source test documented; manual retest advised
+GC-04,Duplicate product SKU,Clear validation and no duplicate record,Automated source test documented; manual retest advised
+GC-05,Insufficient POS stock,"Whole sale rejected, no partial stock deductions",Automated source test documented; manual retest advised
+GC-06,Order cancellation,Reserved quantity restored only once,Automated source test documented; manual retest advised
+GC-07,Complete order,"Creates sale, without second stock deduction",Automated source test documented; manual retest advised
+GC-08,CSV export,Correct formatted data export,Automated source test documented; manual retest advised
+GC-09,Mobile interface,Navigation and forms usable on small screens,Screenshots supplied; user hands-on check advised
+GC-10,Local database persistence,Orders remain after local restart,Manual verification still needed
+GC-11,Public database persistence,Online SQLite may reset on free hosting,Known limitation; do not depend on persistence

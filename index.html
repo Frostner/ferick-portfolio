@@ -1,1 +1,435 @@
+<!DOCTYPE html>
 
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Ferick Cortizo | BSIT Graduate – IT Support &amp; Networking</title>
+<style>
+:root{--bg:#f5f6fb;--card:#fff;--ink:#12152b;--mut:#5a6080;--ac:#4f46e5;--ac2:#06b6d4;--line:#e2e4f0;--glow:rgba(79,70,229,.18);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="light"]){--bg:#0a0d1c;--card:#131733;--ink:#eef0ff;--mut:#9ba2c4;--ac:#818cf8;--ac2:#22d3ee;--line:#252a4d;--glow:rgba(129,140,248,.25)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]):not([data-theme="light"]){--bg:#0a0d1c;--card:#131733;--ink:#eef0ff;--mut:#9ba2c4;--ac:#818cf8;--ac2:#22d3ee;--line:#252a4d;--glow:rgba(129,140,248,.25)}}
+:root[data-theme="dark"]{--bg:#0a0d1c;--card:#131733;--ink:#eef0ff;--mut:#9ba2c4;--ac:#818cf8;--ac2:#22d3ee;--line:#252a4d;--glow:rgba(129,140,248,.25)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-image:radial-gradient(900px 450px at 85% -5%,var(--glow),transparent),radial-gradient(700px 450px at -10% 35%,var(--glow),transparent)}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 5vw;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav b{font-size:18px}nav .l{display:flex;gap:18px;font-size:14px;color:var(--mut);overflow-x:auto}nav .l a:hover{color:var(--ac2)}
+.hire{padding:8px 18px;border-radius:99px;background:linear-gradient(90deg,var(--ac),var(--ac2));color:#06091a;font-weight:700;font-size:14px;white-space:nowrap}
+section{max-width:1060px;margin:0 auto;padding:84px 5vw 0}
+h2{font-size:32px;margin:0 0 6px;letter-spacing:-.5px}h2+.sub{color:var(--mut);margin:0 0 30px}
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:center;padding-top:72px}
+.tag{display:inline-flex;gap:8px;align-items:center;padding:6px 14px;border:1px solid var(--line);border-radius:99px;font-size:13px;color:var(--mut);background:var(--card)}
+.tag:before{content:"";width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
+h1{font-size:clamp(34px,5.6vw,56px);line-height:1.1;margin:18px 0;letter-spacing:-1.5px}
+.g{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);font-size:18px;max-width:540px}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.pills span{font-size:13px;padding:5px 12px;border-radius:99px;background:color-mix(in srgb,var(--ac) 16%,transparent);color:var(--ac);font-weight:600}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{padding:12px 24px;border-radius:12px;font-weight:600;border:1px solid var(--line);background:var(--card);transition:.2s}
+.btn.p{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#06091a;border:0;box-shadow:0 12px 30px -10px var(--ac)}
+.btn:hover{transform:translateY(-2px)}.btn.off{opacity:.55;pointer-events:none}
+.avatar{aspect-ratio:1;max-width:330px;width:100%;margin:auto;border-radius:36px;background:linear-gradient(135deg,var(--ac),var(--ac2));display:grid;place-items:center;font-size:92px;font-weight:800;color:#06091a;transform:rotate(3deg);box-shadow:0 0 90px -10px var(--ac)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--ac2);box-shadow:0 18px 50px -22px var(--ac2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.ico{font-size:28px}.card h3{margin:10px 0 6px;font-size:19px}.card p{color:var(--mut);margin:0;font-size:15px}
+.lvl{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;border:1px solid var(--ac2);color:var(--ac2)}
+.lvl.w{border-color:var(--line);color:var(--mut)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.tl{border-left:2px solid var(--line);padding-left:22px;margin-left:6px}
+.tl div{position:relative;margin-bottom:26px}.tl div:before{content:"";position:absolute;left:-30px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--ac2);box-shadow:0 0 0 4px var(--glow)}
+.tl small{color:var(--ac2);font-weight:700}.tl h4{margin:2px 0}.tl p{margin:0;color:var(--mut);font-size:15px}
+.soon{border-style:dashed;text-align:center;color:var(--mut)}
+.cert{display:grid;grid-template-columns:1.2fr 1fr;gap:26px;align-items:center}
+.cert img{width:100%;border-radius:14px;border:1px solid var(--line);cursor:zoom-in}
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.plan strong{display:block;font-size:22px;color:var(--ac2)}
+.contact{text-align:center}.contact .card{padding:56px 24px;background:linear-gradient(135deg,color-mix(in srgb,var(--ac) 20%,var(--card)),var(--card))}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:60px 5vw 36px}
+:root{--ac3:#f472b6}
+@keyframes shift{to{background-position:200% center}}
+@keyframes floaty{0%,100%{transform:rotate(3deg) translateY(0)}50%{transform:rotate(1deg) translateY(-14px)}}
+@keyframes glow{0%,100%{box-shadow:0 0 90px -10px var(--ac)}50%{box-shadow:0 0 120px 0 var(--ac2)}}
+@keyframes drift{to{transform:translate(70px,-50px) scale(1.25)}}
+@keyframes blink{50%{opacity:0}}
+@keyframes pop{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes sheen{to{left:140%}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.6)}100%{box-shadow:0 0 0 10px rgba(34,197,94,0)}}
+.g{background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac3),var(--ac));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shift 6s linear infinite}
+.btn.p{background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac3),var(--ac));background-size:200% auto;animation:shift 5s linear infinite;position:relative;overflow:hidden}
+.btn.p:after{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:rgba(255,255,255,.4);transform:skewX(-20deg);animation:sheen 3.5s ease-in-out infinite}
+.avatar{background:linear-gradient(135deg,var(--ac),var(--ac2),var(--ac3),var(--ac));background-size:300% 300%;animation:floaty 6s ease-in-out infinite,glow 5s ease-in-out infinite,shift 8s linear infinite}
+.tag:before{animation:pulse 2s infinite}
+.hero>div>*{animation:pop .8s both}.hero>div>*:nth-child(2){animation-delay:.12s}.hero>div>*:nth-child(3){animation-delay:.24s}.hero>div>*:nth-child(4){animation-delay:.36s}.hero>div>*:nth-child(5){animation-delay:.48s}.hero>div>*:nth-child(6){animation-delay:.6s}
+h2:after{content:'';display:block;width:56px;height:4px;border-radius:4px;margin-top:8px;background:linear-gradient(90deg,var(--ac2),var(--ac3))}
+.grid .card:nth-child(3n+2):hover{border-color:var(--ac3);box-shadow:0 18px 50px -22px var(--ac3)}
+.typed{color:var(--mut);font-size:18px;margin-top:-6px}.typed b{color:var(--ac2)}.typed b:after{content:'|';animation:blink 1s steps(1) infinite}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}.rv.in{opacity:1;transform:none}
+.orb{position:fixed;border-radius:50%;filter:blur(90px);opacity:.3;z-index:-1;pointer-events:none;animation:drift 16s ease-in-out infinite alternate}.o1{width:420px;height:420px;background:var(--ac);top:-100px;left:-100px}.o2{width:380px;height:380px;background:var(--ac2);top:35%;right:-120px;animation-duration:20s}.o3{width:360px;height:360px;background:var(--ac3);bottom:-120px;left:30%;animation-duration:24s}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:20;background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac3))}
+#net{position:fixed;inset:0;width:100%;height:100%;z-index:-1;opacity:.55;pointer-events:none}
+#glow{position:fixed;width:360px;height:360px;border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,var(--glow),transparent 65%);transform:translate(-50%,-50%);left:-999px;top:-999px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stats .card{text-align:center;padding:18px}.stats strong{display:block;font-size:34px;background:linear-gradient(90deg,var(--ac2),var(--ac3));-webkit-background-clip:text;background-clip:text;color:transparent}.stats span{color:var(--mut);font-size:13px}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq{overflow:hidden;margin-top:34px;border-block:1px solid var(--line);padding:12px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mq div{display:flex;gap:40px;width:max-content;animation:mq 30s linear infinite;color:var(--mut);font-weight:600;white-space:nowrap}.mq b{color:var(--ac2)}
+.meter{height:8px;border-radius:9px;background:var(--line);margin-top:14px;overflow:hidden}.meter i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac3));transition:width 1.4s ease .3s}.in .meter i{width:var(--w)}
+.shot{margin-top:16px;aspect-ratio:16/9;border:1px dashed var(--line);border-radius:12px;display:grid;place-items:center;font-size:13px;color:var(--mut);background:repeating-linear-gradient(45deg,transparent 0 10px,rgba(129,140,248,.07) 10px 20px)}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin-bottom:12px;transition:.25s}details:hover{border-color:var(--ac2)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between}summary:after{content:'+';color:var(--ac2);font-size:20px}details[open] summary:after{content:'–'}
+details p{margin:10px 0 0;color:var(--mut);font-size:15px}
+@media(max-width:780px){.stats{grid-template-columns:1fr 1fr}}
+.cert img{transition:transform .4s ease,box-shadow .4s ease}.cert img:hover{transform:scale(1.03) rotate(-.6deg);box-shadow:0 24px 60px -20px var(--ac2)}
+.rs{display:grid;grid-template-columns:1fr 1.6fr;gap:0;overflow:hidden;padding:0;text-align:left}.rs>div{padding:28px}.rs .side{background:linear-gradient(160deg,color-mix(in srgb,var(--ac) 30%,var(--card)),color-mix(in srgb,var(--ac3) 18%,var(--card)))}.rs h3{margin:0 0 4px;font-size:22px}.rs h5{margin:18px 0 6px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ac2)}.rs p,.rs li{color:var(--mut);font-size:14.5px;margin:0}.rs ul{margin:0;padding-left:18px}
+.l a.on{color:var(--ac2);font-weight:700}
+#top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#06091a;font-weight:800;opacity:0;pointer-events:none;transition:.3s;z-index:15}#top.show{opacity:1;pointer-events:auto}
+@media(max-width:780px){.rs{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+@media(max-width:780px){.hero,.two,.cert{grid-template-columns:1fr}.avatar{max-width:210px;font-size:60px;order:-1}.plan{grid-template-columns:1fr}nav .l{display:none}}
+.avatar{overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover;object-position:50% 8%;display:block;filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))}
+.cs{padding:30px}.csteps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;padding:0;margin:18px 0}.csteps li{counter-increment:s;display:flex;gap:10px;align-items:center;font-size:14px;color:var(--mut)}.csteps li:before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#06091a;font-weight:700;font-size:13px;display:grid;place-items:center}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}.kpis div{border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}.kpis strong{display:block;font-size:24px;background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}.kpis span{font-size:12px;color:var(--mut)}
+.br{display:grid;grid-template-columns:84px 1fr auto;gap:10px;align-items:center;margin-top:10px;font-size:13px}.br span{color:var(--mut)}.br b{font-size:12.5px}.bar{height:10px;border-radius:9px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;width:var(--w);border-radius:9px;background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac3));transition:width 1.3s ease}.rv:not(.in) .bar i{width:0}
+.fh{margin:22px 0 8px;font-size:15px;color:var(--ac2);letter-spacing:1px;text-transform:uppercase}.fl{margin:0;padding-left:20px;color:var(--mut);font-size:15px}.fl li{margin-bottom:6px}.fl b{color:var(--ink)}
+
+/* Small tags used in project technology lists */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0 12px}
+.chips i{font-style:normal;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;color:var(--ac2);border:1px solid var(--line);background:color-mix(in srgb,var(--ac) 10%,var(--card))}
+/* Golden Crust screenshot gallery */
+.gc-gallery-intro{color:var(--mut);font-size:14px;margin:0 0 14px}
+.gc-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:12px 0 26px}
+.gc-shot{display:flex;flex-direction:column;min-width:0;position:relative;text-align:left;padding:0;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:15px;overflow:hidden;cursor:zoom-in;font:inherit;transition:transform .18s,border-color .18s,box-shadow .18s}
+.gc-shot:hover,.gc-shot:focus-visible{transform:translateY(-3px);border-color:var(--ac2);box-shadow:0 12px 32px -18px var(--ac2)}
+.gc-shot img{display:block;width:100%;height:156px;object-fit:cover;object-position:top center;background:#f2f0ea;border-bottom:1px solid var(--line)}
+.gc-shot-text{padding:12px 14px;display:flex;gap:4px;flex-direction:column;flex:1}
+.gc-shot-text strong{font-size:14px;line-height:1.4}
+.gc-shot-text small{color:var(--mut);font-size:12px;line-height:1.45}
+.gc-zoom-icon{position:absolute;right:9px;top:9px;padding:3px 9px;border-radius:9px;background:rgba(12,20,23,.82);color:white;font-size:16px}
+.gc-gallery-dialog{max-width:min(1100px,94vw);max-height:94vh;width:max-content;min-width:min(560px,94vw);background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 20px 80px rgba(0,0,0,.5)}
+.gc-gallery-dialog::backdrop{background:rgba(4,8,17,.86)}
+.gc-gallery-dialog header{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:10px;padding:0 0 8px;border-bottom:1px solid var(--line)}
+.gc-gallery-dialog header b{font-size:17px}
+.gc-gallery-dialog button{padding:5px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font-size:22px;cursor:pointer}
+.gc-gallery-dialog>img{display:block;max-width:100%;height:auto;max-height:70vh;object-fit:contain;margin:auto;border-radius:8px}
+.gc-gallery-dialog>p{font-size:13px;color:var(--mut);margin:8px 0 0}
+.gc-gallery-dialog .gc-img-original{display:inline-block;margin-top:8px;color:var(--ac2);text-decoration:underline;font-size:13px}
+.gc-interview-intro{margin-bottom:18px;padding:20px}
+.gc-interview-intro strong{color:var(--ac2)}
+.gc-interview-intro p{font-size:14px;color:var(--mut);margin:8px 0 0}
+.gc-interview-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.gc-interview-item{margin:0;min-width:0;height:max-content}
+.gc-interview-item summary{align-items:start;justify-content:flex-start;gap:12px;line-height:1.45}
+.gc-interview-item summary:after{margin-left:auto;flex:none}
+.gc-interview-item p{margin-top:12px;line-height:1.65}
+.gc-q-number{font-weight:800;color:var(--ac2);font-size:13px;line-height:1.7}
+@media(max-width:760px){.gc-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.gc-interview-grid{grid-template-columns:1fr}}
+@media(max-width:430px){.gc-gallery{grid-template-columns:1fr}.gc-shot img{height:200px}}
+@media(prefers-reduced-motion:reduce){.gc-shot{transition:none}}
+
+
+/* Additions: portfolio evidence, mock interview video and updated resume */
+.evidence-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:18px 0 12px}
+.evidence-note{display:block;font-size:12px!important;line-height:1.65!important;color:var(--mut);margin-top:12px!important}
+.excel-preview{margin:18px 0;padding:12px;background:color-mix(in srgb,var(--ac) 7%,var(--card));border:1px solid var(--line);border-radius:16px}
+.excel-preview figcaption{font-size:13px;color:var(--mut);margin-bottom:8px;font-weight:600}
+.excel-preview img{display:block;width:100%;height:auto;max-height:300px;object-fit:contain;object-position:left center;border-radius:8px;border:1px solid var(--line)}
+.project-three{margin-top:24px}.project-three h3{font-size:23px}.project-three .pills{margin:16px 0 4px}
+.interview-recording{margin:22px 0 28px;padding:24px}.recording-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+.recording-head h3{font-size:22px;margin:8px 0 4px}.recording-head p{color:var(--mut);font-size:14px;margin:0;max-width:660px}
+.recording-duration{white-space:nowrap;color:var(--ac2);font-size:13px;font-weight:700}.video-shell{width:100%;max-width:820px;margin:auto;background:#05060b;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.video-shell video{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:contain;background:#05060b}
+.rs .side .resume-photo{width:114px;height:126px;object-fit:cover;object-position:center top;border-radius:16px;display:block;margin-bottom:18px;border:2px solid color-mix(in srgb,var(--ac2) 44%,transparent);background:#e8edfc}
+.rs ul{padding-left:18px}.rs li{margin-bottom:6px}.rs a{color:inherit;text-decoration:underline;text-decoration-color:var(--ac2)}
+@media(max-width:680px){.recording-head{flex-direction:column;align-items:flex-start}.interview-recording{padding:16px}.excel-preview{padding:8px}}
+
+/* Documentation and evidence additions — retain existing portfolio theme */
+.fc-docgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:16px}
+.fc-doccard{display:flex;flex-direction:column;gap:10px}
+.fc-doccard h3{margin:4px 0 2px;font-size:18px}
+.fc-doccard p{color:var(--mut);font-size:14px;margin:0}
+.fc-doc-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+.fc-doc-actions .btn{font-size:13px;padding:9px 12px}
+.fc-evidence{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.fc-evidence span{font-size:12px;padding:4px 11px;border-radius:99px;border:1px solid var(--line);color:var(--mut)}
+.fc-docnote{border-left:3px solid var(--ac2);background:color-mix(in srgb,var(--ac) 8%,var(--card));padding:14px 17px;border-radius:10px;margin:15px 0;color:var(--mut);font-size:14px}
+.fc-docnote strong{color:var(--ink)}
+.fc-doclist{padding-left:19px;margin:8px 0}.fc-doclist li{color:var(--mut);margin:6px 0;font-size:14px}
+.fc-rowtitle{font-size:15px;font-weight:700;color:var(--ink)}
+.fc-doccard details{margin:4px 0;background:color-mix(in srgb,var(--bg) 60%,var(--card))}
+.fc-evidencetable{border-collapse:collapse;width:100%;font-size:14px;margin:10px 0}
+.fc-evidencetable td,.fc-evidencetable th{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+.fc-evidencetable th{color:var(--ac2);font-weight:700;background:color-mix(in srgb,var(--ac) 7%,var(--card))}
+.fc-checkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.fc-check{border:1px solid var(--line);background:var(--card);border-radius:13px;padding:13px 14px;font-size:14px;color:var(--mut)}
+.fc-check strong{display:block;color:var(--ink);font-size:14px}
+.fc-check[data-status="verify"]{border-style:dashed}
+.fc-livelabel{color:var(--ac2);font-weight:700;font-size:12px}
+@media(max-width:700px){.fc-evidencetable{font-size:12px}.fc-evidencetable td,.fc-evidencetable th{padding:8px 6px}}
+
+.site-preview{margin:18px 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.02)}
+.site-preview-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--line);color:var(--mut);font-size:13px}
+.site-preview-dot{width:10px;height:10px;border-radius:50%;background:var(--ac2);display:inline-block;opacity:.85}
+.site-preview iframe{display:block;width:100%;height:520px;border:0;background:#fff}
+.site-preview-fallback{padding:14px;color:var(--mut);font-size:14px}
+@media (max-width:820px){.site-preview iframe{height:420px}}
+
+
+/* Study planner screenshot: responsive and expandable */
+.plano-preview{margin:20px auto 24px;max-width:920px}
+.plano-shot{width:100%}
+.plano-shot img{width:100%;height:auto;max-height:490px;object-fit:contain;object-position:center;background:#fff6fa;aspect-ratio:1763 / 978}
+.plano-shot .gc-shot-text{padding:12px 17px}
+@media(max-width:700px){.plano-shot img{max-height:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div><canvas id="net"></canvas><div id="glow"></div><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+<nav><b>FC<span class="g">.</span></b><div class="l"><a href="#profile">Profile</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#documentation">Documentation</a><a href="#cases">Cases</a><a href="#resume">Resume</a><a href="#certs">Certificates</a><a href="#plan">Career plan</a><a href="#security">Security</a><a href="#ailog">AI Log</a><a href="#reflection">Reflection</a><a href="#interview">Interview</a></div><a class="hire" href="#contact">Contact</a></nav>
+<section class="hero">
+<div>
+<span class="tag">BSIT Graduate · Datamex College of Saint Adeline</span>
+<h1>Hi, I'm <span class="g">Ferick Cortizo</span></h1>
+<p>An aspiring IT Support and Networking professional who is learning how to keep systems running and solve problems step by step.</p>
+<div class="typed">Currently learning: <b id="ty"></b></div>
+<div class="pills"><span>IT Support</span><span>Networking</span><span>Git &amp; GitHub</span></div>
+<div class="btns"><a class="btn p" href="#projects">View my projects</a><a class="btn p" download="Ferick_Cortizo_Resume.pdf" href="assets/ferick-cortizo-resume.pdf">Download resume</a><a class="btn" href="#contact">Contact me</a></div>
+</div>
+<div class="avatar"><img alt="Ferick Cortizo" src="assets/ferick-cortizo.webp"/></div>
+</section>
+<section style="padding-top:36px"><div class="stats"><div class="card"><strong data-n="1">1</strong><span>Certificate earned</span></div><div class="card"><strong data-n="3">3</strong><span>Featured projects</span></div><div class="card"><strong data-n="5">5</strong><span>Troubleshooting cases</span></div><div class="card"><strong data-n="2">2</strong><span>Focus areas</span></div></div>
+<div class="mq"><div><span><b>Learning roadmap</b></span><span>TCP/IP</span><span>DNS</span><span>DHCP</span><span>Subnetting</span><span>Windows troubleshooting</span><span>Git</span><span>GitHub</span><span>Cisco Packet Tracer</span><span><b>Learning roadmap</b></span><span>TCP/IP</span><span>DNS</span><span>DHCP</span><span>Subnetting</span><span>Windows troubleshooting</span><span>Git</span><span>GitHub</span><span>Cisco Packet Tracer</span></div></div></section>
+<section id="profile"><h2>Professional profile</h2><p class="sub">Target field: IT Support / Networking.</p>
+<div class="two">
+<div class="card"><p style="font-size:16.5px">I am a BSIT graduate from Datamex College of Saint Adeline with a strong interest in IT support and networking. My interest in technology started with wanting to understand how computers work and how to solve everyday technical problems. Throughout my BSIT studies, I have explored web development, databases, data analysis, computer troubleshooting, and basic networking concepts. I learn best by trying things myself, encountering errors, and finding practical solutions. One of the projects I worked on is Golden Crust, a bakery inventory and customer ordering system. That experience helped me practice testing, using GitHub, documenting work, and understanding how a website communicates with its database. I also completed an Excel case study on school IT equipment, using formulas, pivot tables, charts, and written recommendations. My portfolio includes five troubleshooting examples because I want to develop a systematic approach to helping users. Outside of technical tasks, customer-facing work has helped me become more patient, organized, and comfortable communicating with different people. My goal is to begin in IT support and gradually build stronger skills in networking and systems administration. I know I am still learning, so I focus on improving steadily, testing my work, and explaining what I can actually demonstrate.</p></div>
+<div class="card"><h3 style="margin-top:0">Quick facts</h3><p><b>Status:</b> BSIT Graduate<br/><b>School:</b> Datamex College of Saint Adeline<br/><b>Field:</b> IT Support / Networking<br/><b>Latest training:</b> GitHub webinar, Aug 2026</p></div>
+</div></section>
+<section id="skills"><h2>Technical skills</h2><p class="sub">Technical skills developed through coursework, projects and hands-on practice.</p>
+<div class="grid">
+<div class="card"><div class="ico">🐍</div><h3>Python, FastAPI &amp; SQL database</h3><p>A working web app with a database, login and search.<br/><b>Evidence:</b> GoldenCrust (Project 1, group project).</p><span class="lvl">Beginner</span><div class="meter"><i style="--w:25%"></i></div></div>
+<div class="card"><div class="ico">📊</div><h3>Excel &amp; data analysis</h3><p>Data cleaning, formulas, pivot table and charts.<br/><b>Evidence:</b> Case Study 8, equipment inventory analysis.</p><span class="lvl">Beginner</span></div>
+<div class="card"><div class="ico">🔀</div><h3>Git &amp; GitHub</h3><p>Version control and deployment basics.<br/><b>Evidence:</b> Build, Commit, Deploy webinar (Aug 20, 2026).</p><span class="lvl">Beginner</span><div class="meter"><i style="--w:30%"></i></div></div>
+<div class="card"><div class="ico">📱</div><h3>Mobile development concepts</h3><p>Introduction to building and deploying with GitHub.<br/><b>Evidence:</b> same webinar.</p><span class="lvl">Beginner</span><div class="meter"><i style="--w:25%"></i></div></div>
+<div class="card"><div class="ico">🛠️</div><h3>IT support &amp; troubleshooting</h3><p>Diagnosing power, sound, Wi-Fi, input and display problems step by step.<br/><b>Evidence:</b> five documented troubleshooting cases.</p><span class="lvl">Beginner</span><div class="meter"><i style="--w:25%"></i></div></div>
+<div class="card"><div class="ico">🌐</div><h3>Networking (TCP/IP, DNS, DHCP)</h3><p>Studying core networking concepts; practical lab work is an ongoing learning goal.</p><span class="lvl w">Learning</span><div class="meter"><i style="--w:0%"></i></div></div>
+</div></section>
+<section id="projects"><h2>Projects</h2><p class="sub">Evidence of what I can do, with the data behind it.</p>
+<div class="card cs"><span class="lvl">Project 1 · Web / Application · Group project</span><h3 style="font-size:26px;margin:12px 0 6px">GoldenCrust: Bakery Inventory, Sales &amp; Customer Pickup Ordering</h3>
+<p>A web system for a small bakery. Staff manage products and stock, record sales, and read reports, while customers browse the shop, create an account and order bread for counter pickup. Everything is saved in a real SQL database.</p>
+<div class="chips"><i>Python</i><i>FastAPI</i><i>SQLite</i><i>HTML · CSS · JavaScript</i><i>Bootstrap</i><i>pytest</i></div>
+<div class="btns"><a class="btn p" href="https://golden-crust-demo.onrender.com/shop" rel="noopener" target="_blank">Live customer shop</a><a class="btn" href="https://golden-crust-demo.onrender.com/" rel="noopener" target="_blank">Admin dashboard</a><a class="btn" href="https://github.com/Frostner/BreadStore-Inventory-System" rel="noopener" target="_blank">GitHub repository</a></div>
+<h4 class="fh">Project screenshots</h4>
+<p class="gc-gallery-intro">Real screenshots of the bakery application. Select any image to view it larger.</p>
+<div aria-label="Golden Crust application screenshots" class="gc-gallery">
+<button aria-label="View screenshot: Customer storefront" class="gc-shot" data-gc-shot="" type="button">
+<img alt="Golden Crust project: Customer storefront" decoding="async" height="450" loading="lazy" src="assets/golden-crust-project-customer-storefront.webp" width="700"/>
+<span class="gc-shot-text"><strong>Customer storefront</strong><small>Browse breads, view prices and add items to the basket.</small></span>
+<span aria-hidden="true" class="gc-zoom-icon">↗</span>
+</button>
+<button aria-label="View screenshot: Admin overview" class="gc-shot" data-gc-shot="" type="button">
+<img alt="Golden Crust project: Admin overview" decoding="async" height="450" loading="lazy" src="assets/golden-crust-project-admin-overview.webp" width="700"/>
+<span class="gc-shot-text"><strong>Admin overview</strong><small>Overview of stock, sales and items that need attention.</small></span>
+<span aria-hidden="true" class="gc-zoom-icon">↗</span>
+</button>
+<button aria-label="View screenshot: Customer orders" class="gc-shot" data-gc-shot="" type="button">
+<img alt="Golden Crust project: Customer orders" decoding="async" height="450" loading="lazy" src="assets/golden-crust-project-customer-orders.webp" width="700"/>
+<span class="gc-shot-text"><strong>Customer orders</strong><small>Admin reviews and updates customer pickup orders.</small></span>
+<span aria-hidden="true" class="gc-zoom-icon">↗</span>
+</button>
+<button aria-label="View screenshot: Products and inventory" class="gc-shot" data-gc-shot="" type="button">
+<img alt="Golden Crust project: Products and inventory" decoding="async" height="450" loading="lazy" src="assets/golden-crust-project-products-and-inventory.webp" width="700"/>
+<span class="gc-shot-text"><strong>Products and inventory</strong><small>Product list, stock quantities and inventory tools.</small></span>
+<span aria-hidden="true" class="gc-zoom-icon">↗</span>
+</button>
+<button aria-label="View screenshot: Point of sale" class="gc-shot" data-gc-shot="" type="button">
+<img alt="Golden Crust project: Point of sale" decoding="async" height="450" loading="lazy" src="assets/golden-crust-project-point-of-sale.webp" width="700"/>
+<span class="gc-shot-text"><strong>Point of sale</strong><small>The sales screen for recording in-store purchases.</small></span>
+<span aria-hidden="true" class="gc-zoom-icon">↗</span>
+</button>
+<button aria-label="View screenshot: Reports and insights" class="gc-shot" data-gc-shot="" type="button">
+<img alt="Golden Crust project: Reports and insights" decoding="async" height="450" loading="lazy" src="assets/golden-crust-project-reports-and-insights.webp" width="700"/>
+<span class="gc-shot-text"><strong>Reports and insights</strong><small>Sales charts and reports for making decisions.</small></span>
+<span aria-hidden="true" class="gc-zoom-icon">↗</span>
+</button>
+</div>
+<h4 class="fh">What it does</h4><ul class="fl"><li>Admin login, dashboard, and product create, read, update and archive</li><li>Search and filters, stock movement history, and restock or adjustment records</li><li>Point of sale where a sale and its stock deduction are saved in one database transaction</li><li>Reports, CSV export, and reorder suggestions based on a simple, explainable rule</li><li>Customer accounts, basket, pickup orders and order tracking, with pay-at-counter only</li></ul>
+<h4 class="fh">Quality and security</h4><ul class="fl"><li>Input validation and clear error handling</li><li>Hashed passwords, session cookies, and parameterized SQL queries</li><li>11 automated API tests written with pytest (documented in the repository)</li></ul>
+<h4 class="fh">My role</h4><p style="font-size:15px">Our three-member group collaborated on the project, including development, testing, database integration and project documentation.</p>
+<p style="font-size:13px;color:var(--mut);margin-top:12px">The live demo runs on a free host, so the first visit can take about a minute to wake up, and demo data may reset. Admin login details are available to my instructor on request.</p></div>
+<div class="card cs"><span class="lvl">Data Analysis · Case Study 8</span><h3 style="font-size:26px;margin:12px 0 6px">School IT Equipment Inventory Analysis</h3>
+<p>I organized and analyzed 50 equipment records from four departments (Admin, Faculty, IT and Library) to see what the school owns, what condition it is in, what it costs to maintain, and where it should be moved or repaired first.</p><div class="evidence-actions"><a class="btn p" download="Cortizo_Case_Study_8.xlsx" href="assets/cortizo-case-study-8.xlsx">⬇ Original Excel file</a><a class="btn" download="Cortizo_Case_Study_8_Reviewed.xlsx" href="assets/cortizo-case-study-8-reviewed.xlsx">⬇ Analysis workbook</a><span class="evidence-note">Original Case Study 8 workbook · Raw Data · Cleaned Data · Calculations · Pivot Table · Chart · Interpretation</span></div><figure class="excel-preview"><figcaption>Evidence preview: calculations from the uploaded Excel workbook</figcaption><img alt="Excel Case Study 8 calculations worksheet preview" loading="lazy" src="assets/excel-case-study-8-calculations-worksheet-preview.png"/></figure>
+<div class="chips"><i>Excel</i><i>Data cleaning</i><i>Pivot table</i><i>Charts</i><i>Formulas</i></div>
+<ol class="csteps"><li>Raw data: 50 asset records, 10 fields</li><li>Cleaned data: checked for duplicates and blanks</li><li>Calculations: mean, median, min, max and totals</li><li>Pivot table by equipment type</li><li>Charts</li><li>Interpretation and recommendations</li></ol>
+<div class="kpis"><div><strong>279</strong><span>Total units</span></div><div><strong>₱9.17M</strong><span>Acquisition value</span></div><div><strong>₱115,182</strong><span>Maintenance cost</span></div><div><strong>26.5%</strong><span>Units needing repair</span></div></div>
+<div class="grid" style="margin-top:20px"><div class="card"><h3>Units by equipment type</h3><div class="br"><span>Router</span><div class="bar"><i style="--w:100%"></i></div><b>70</b></div><div class="br"><span>Projector</span><div class="bar"><i style="--w:99%"></i></div><b>69</b></div><div class="br"><span>Laptop</span><div class="bar"><i style="--w:86%"></i></div><b>60</b></div><div class="br"><span>Desktop</span><div class="bar"><i style="--w:70%"></i></div><b>49</b></div><div class="br"><span>Printer</span><div class="bar"><i style="--w:44%"></i></div><b>31</b></div></div><div class="card"><h3>Units by department</h3><div class="br"><span>Admin</span><div class="bar"><i style="--w:100%"></i></div><b>98</b></div><div class="br"><span>IT</span><div class="bar"><i style="--w:76%"></i></div><b>74</b></div><div class="br"><span>Faculty</span><div class="bar"><i style="--w:62%"></i></div><b>61</b></div><div class="br"><span>Library</span><div class="bar"><i style="--w:47%"></i></div><b>46</b></div></div><div class="card"><h3>Maintenance cost by type</h3><div class="br"><span>Laptop</span><div class="bar"><i style="--w:100%"></i></div><b>₱28,361</b></div><div class="br"><span>Projector</span><div class="bar"><i style="--w:83%"></i></div><b>₱23,488</b></div><div class="br"><span>Router</span><div class="bar"><i style="--w:78%"></i></div><b>₱22,238</b></div><div class="br"><span>Desktop</span><div class="bar"><i style="--w:77%"></i></div><b>₱21,890</b></div><div class="br"><span>Printer</span><div class="bar"><i style="--w:68%"></i></div><b>₱19,205</b></div></div><div class="card"><h3>Units by condition</h3><div class="br"><span>Good</span><div class="bar"><i style="--w:100%"></i></div><b>108</b></div><div class="br"><span>Fair</span><div class="bar"><i style="--w:90%"></i></div><b>97</b></div><div class="br"><span>Needs Repair</span><div class="bar"><i style="--w:69%"></i></div><b>74</b></div></div></div>
+<h4 class="fh">Key findings</h4><ul class="fl"><li><b>Printers are concentrated in IT:</b> 20 of 31 printers (65%). Library has none and Faculty has 1.</li><li><b>Admin holds most projectors:</b> 37 of 69 (54%).</li><li><b>IT has few laptops:</b> 7 of 60, while Library has 23 and Faculty 18.</li><li><b>Printers are the oldest equipment</b> at 4.7 years on average, followed by desktops at 4.5.</li><li><b>Laptops cost the most to maintain</b> (₱28,361), and the single highest repair cost is a projector in IT (A8036, ₱5,799).</li><li><b>Repair priority:</b> 12 records (74 units) need repair, and 8 more records (30 units) are fair-condition equipment aged 5 years or more.</li></ul>
+<h4 class="fh">Recommendations</h4><ul class="fl"><li>Repair the 12 high-priority records first (74 units).</li><li>Move some printers from IT to Faculty and Library, which have almost none.</li><li>Review the 8 aging fair-condition records for replacement before they fail.</li><li>Rebalance laptops toward IT, which has the fewest.</li></ul></div>
+<div class="grid" style="margin-top:18px"><div class="card cs project-three">
+<span class="lvl">Project 3 · Specialization · Shared group project</span>
+<h3>Plano — Study Planner</h3>
+<p>Plano is a shared study-planning project with a daily task dashboard, completion indicators, and task-management screens. The design focuses on helping students organize their workload and stay on track.</p>
+<div class="pills"><span>Study Planner</span><span>Shared Repository</span><span>Specialization Project</span></div><div class="plano-preview"><button aria-label="View enlarged Plano Study Planner screenshot" class="gc-shot plano-shot" data-gc-shot="" type="button"><img alt="Plano Study Planner home dashboard showing daily tasks, progress and bottom navigation" decoding="async" height="799" loading="lazy" src="assets/plano-study-planner-home-dashboard-showing-daily-tasks-progress-a.webp" width="1440"/><span class="gc-shot-text"><strong>Plano — Home dashboard</strong><small>Daily tasks, progress summary and navigation · Click to enlarge</small></span><span aria-hidden="true" class="gc-zoom-icon">↗</span></button></div>
+<div class="btns"><a class="btn p" href="https://piauxdesign.github.io/plano-study-planner/" rel="noopener noreferrer" target="_blank">Open live study planner ↗</a><a class="btn" href="https://github.com/piauxdesign/plano-study-planner" rel="noopener noreferrer" target="_blank">View source on GitHub ↗</a></div>
+</div></div></section>
+<section id="documentation"><h2>Documentation &amp; project evidence</h2><p class="sub">Project documents, database evidence and supporting material.</p><div class="fc-docgrid"><article class="card fc-doccard"><span class="fc-livelabel">DOCUMENT</span><h3>Project 1 — Golden Crust</h3><p>System requirements, flow, architecture, database design, tests, deployment and known limitations.</p><div class="fc-doc-actions"><a class="btn p" download="Project_1_Golden_Crust_Documentation.pdf" href="assets/project-1-golden-crust-documentation.pdf">⬇ Download PDF</a></div></article><article class="card fc-doccard"><span class="fc-livelabel">DOCUMENT</span><h3>Project 2 — Equipment Analysis</h3><p>Cleaned data methodology, SQL evidence, interpretations and recommendations.</p><div class="fc-doc-actions"><a class="btn p" download="Project_2_Equipment_Analysis_Documentation.pdf" href="assets/project-2-equipment-analysis-documentation.pdf">⬇ Download PDF</a></div></article><article class="card fc-doccard"><span class="fc-livelabel">DOCUMENT</span><h3>Career Development Plan</h3><p>Target position, current skills, future training and 6-month, 1-year and 3-year goals.</p><div class="fc-doc-actions"><a class="btn p" download="Career_Development_Plan.pdf" href="assets/career-development-plan.pdf">⬇ Download PDF</a></div></article><article class="card fc-doccard"><span class="fc-livelabel">DOCUMENT</span><h3>Project Defense Runbook</h3><p>Step 22 timings, demo script, database explanation and panel Q&amp;A preparation.</p><div class="fc-doc-actions"><a class="btn p" download="Golden_Crust_Defense_Outline.pdf" href="assets/golden-crust-defense-outline.pdf">⬇ Download PDF</a></div></article><article class="card fc-doccard"><span class="fc-livelabel">DATA / DATABASE</span><h3>SQLite &amp; SQL Evidence</h3><p>Companion database and reproducible SQL queries built from the 50 cleaned equipment records.</p><div class="fc-doc-actions"><a class="btn" download="Equipment_Analysis.sqlite" href="assets/equipment-analysis.sqlite">⬇ SQLite Database</a><a class="btn" download="Equipment_Analysis_Database.sql" href="assets/equipment-analysis-database.txt">⬇ SQL queries</a></div></article><article class="card fc-doccard"><span class="fc-livelabel">TRANSPARENCY</span><h3>AI Usage Log &amp; Technical Reviewer</h3><p>Dated AI assistance record and short technical interview explanations.</p><div class="fc-doc-actions"><a class="btn" download="AI_Usage_Log_Dated.md" href="assets/ai-usage-log-dated.md">⬇ AI Usage Log</a><a class="btn" download="Technical_Interview_Reviewer.md" href="assets/technical-interview-reviewer.md">⬇ IT Q&amp;A</a></div></article></div><div class="card" style="margin-top:18px"><h3>What I can explain during a technical review</h3><div class="fc-evidence"><span>Backend → Database</span><span>Customer → Admin</span><span>ERD &amp; SQL</span><span>Test cases</span><span>GitHub &amp; Render</span><span>Excel formulas</span><span>IT troubleshooting</span></div><details><summary>Golden Crust customer-to-admin workflow</summary><p>Customer signs in → selects items → submits a pickup order → FastAPI validates and reserves inventory in SQLite → admin sees Pending → Preparing → Ready → Completed after pickup → a completed sale is recorded without deducting stock twice. Cancellation before completion restores reserved stock.</p></details><details><summary>Project 2 — exact calculated results</summary><p>From 50 records: 279 total units, ₱9,168,000 estimated acquisition, ₱115,182 maintenance and 74 units in 12 repair-marked asset records. The reviewed workbook and SQL companion can reproduce these totals.</p></details><details><summary>Testing and limitations</summary><p>Public deployment succeeded and a sample online order worked. The supplied source documents 11 automated API tests; an updated manual test matrix is provided separately. Free hosting has ephemeral SQLite storage, so this is a portfolio demonstration only.</p></details><div class="fc-doc-actions"><a class="btn" download="Golden_Crust_Test_Evidence.csv" href="assets/golden-crust-test-evidence.csv">⬇ Testing matrix</a><a class="btn" download="Equipment_Analysis_Cleaned_Data.csv" href="assets/equipment-analysis-cleaned-data.csv">⬇ Cleaned CSV</a></div></div></section>
+<section id="cases"><h2>Problem-solving cases</h2><p class="sub">Five troubleshooting cases: problem, possible causes, diagnosis, solution, lesson learned.</p>
+<details open=""><summary>Case 1 · Computer won't turn on</summary><p><b>Problem:</b> The PC does nothing when the power button is pressed.<br/><b>Possible causes:</b> The power cable is loose, the outlet or power strip is off, the monitor is off (so it only looks dead), or the power supply failed.<br/><b>Diagnostic procedure:</b> Checked that the power cable was firmly plugged into the PC and the wall, tested the outlet with another device, and checked whether the monitor had power.<br/><b>Solution:</b> Reconnected the power cable and switched on the power strip.<br/><b>Lesson learned:</b> Check the simplest things first: power, cables and switches.</p></details>
+<details><summary>Case 2 · No sound from the computer</summary><p><b>Problem:</b> A video played, but no sound came out.<br/><b>Possible causes:</b> The volume is muted or too low, the wrong output device is selected, or the speakers or headphones are unplugged or off.<br/><b>Diagnostic procedure:</b> Checked the volume icon in the taskbar, then the speaker cable and power, then the output device selected in the sound settings.<br/><b>Solution:</b> Unmuted the volume and selected the correct speakers as the output device.<br/><b>Lesson learned:</b> Most sound problems are settings, not broken hardware.</p></details>
+<details><summary>Case 3 · Laptop won't connect to Wi-Fi</summary><p><b>Problem:</b> The laptop showed no available Wi-Fi networks.<br/><b>Possible causes:</b> Airplane mode is on, Wi-Fi is switched off, or the router is off or out of range.<br/><b>Diagnostic procedure:</b> Checked the Wi-Fi and airplane mode icons, then saw whether a phone could find the same network.<br/><b>Solution:</b> Turned off airplane mode, switched Wi-Fi on, and reconnected to the network.<br/><b>Lesson learned:</b> Check the on/off switches before looking for complicated causes.</p></details>
+<details><summary>Case 4 · Keyboard or mouse not working</summary><p><b>Problem:</b> The keyboard or mouse did not respond.<br/><b>Possible causes:</b> The USB cable or receiver is loose, the batteries are dead (wireless), or the USB port is faulty.<br/><b>Diagnostic procedure:</b> Reconnected the device, tried a different USB port, replaced the batteries, and tested it on another computer.<br/><b>Solution:</b> Plugged it into a working USB port and restarted the computer.<br/><b>Lesson learned:</b> Test the device in another port or on another computer to find out whether the device or the port is at fault.</p></details>
+<details><summary>Case 5 · Monitor shows “No Signal”</summary><p><b>Problem:</b> The PC was on, but the screen said “No Signal”.<br/><b>Possible causes:</b> The video cable is loose, the monitor is on the wrong input (HDMI, VGA, DisplayPort), or the PC is asleep.<br/><b>Diagnostic procedure:</b> Checked both ends of the video cable, changed the monitor’s input source, then moved the mouse and pressed a key.<br/><b>Solution:</b> Reseated the cable and set the monitor to the correct input.<br/><b>Lesson learned:</b> “No signal” usually means the monitor is not receiving a picture, which is often a cable or input setting.</p></details>
+</section>
+<section id="resume"><h2>Resume</h2><p class="sub">A one-page IT resume.</p>
+<div class="card rs"><div class="side"><img alt="Portrait photo for Ferick Cortizo" class="resume-photo" src="assets/ferick-cortizo.webp"/><h3>Ferick Cortizo</h3><p>BSIT Graduate · IT Support / Networking</p>
+<h5>Contact</h5><p><a href="mailto:FerickCortezo25@gmail.com">FerickCortezo25@gmail.com</a><br/><a href="https://github.com/Frostner" rel="noopener noreferrer" target="_blank">github.com/Frostner</a><br/><a href="https://www.linkedin.com/in/ferick-cortizo-611423443/" rel="noopener noreferrer" target="_blank">LinkedIn</a></p>
+<h5>Skills</h5><p>Basic IT troubleshooting<br/>Excel &amp; pivot tables<br/>Git &amp; GitHub<br/>Python / FastAPI basics<br/>HTML / CSS / JavaScript<br/>SQLite databases</p></div><div><h5 style="margin-top:0">Professional summary</h5><p>Entry-level IT candidate interested in technical support and networking. Experience with documented troubleshooting, equipment data analysis, testing a web application, and GitHub deployment.</p>
+<h5>Education</h5><p>Bachelor of Science in Information Technology (BSIT)<br/>Datamex College of Saint Adeline<br/></p>
+<h5>Selected projects</h5><ul>
+<li><b>Golden Crust:</b> Bakery inventory, ordering and sales app; live demo on Render.</li>
+<li><b>School IT Equipment Analysis:</b> Excel formulas, pivot tables, charts and interpretation.</li>
+<li><b>Plano:</b> Study-planner repository shared with groupmates (credit: piauxdesign).</li>
+</ul>
+<h5>Practical experience</h5><p>Food service and cashier training — customer communication, teamwork and following procedures.</p>
+<h5>Certificate</h5><p>Build, Commit, Deploy: Mastering Mobile Development with GitHub (Aug 20, 2026).</p></div></div>
+<p style="color:var(--mut);margin-top:14px;text-align:center"></p><div class="btns" style="justify-content:center"><a class="btn p" download="Ferick_Cortizo_Resume.pdf" href="assets/ferick-cortizo-resume.pdf">Download resume (PDF)</a></div></section>
+<section id="certs"><h2>Certificates &amp; achievements</h2><p class="sub">Click the certificate to open it larger.</p>
+<div class="card cert"><a href="assets/file-f1441e5a1e.jpg" rel="noopener" target="_blank"><img alt="Certificate of participation, Build, Commit, Deploy: Mastering Mobile Development with GitHub" src="assets/file-f1441e5a1e.jpg"/></a>
+<div><h3 style="margin-top:0">Build, Commit, Deploy: Mastering Mobile Development with GitHub</h3><p>Certificate of Participation · 1-hour online webinar via Google Meet, August 20, 2026.<br/>Organized by Ethel Programming Computer Programming Services. Speaker: Maeron Joseph Reyes.</p></div></div></section>
+<section id="journey"><h2>My journey</h2><p class="sub">Where I am so far.</p><div class="tl"><div><small>BSIT Graduate</small><h4>BSIT · Datamex College of Saint Adeline</h4><p>Building my foundation in IT support and networking.</p></div><div><small>Aug 20, 2026</small><h4>Build, Commit, Deploy webinar</h4><p>Learned mobile development and GitHub basics.</p></div><div><small>Oct 2026</small><h4>Industry-ready portfolio</h4><p>Built my portfolio website and documented my three projects.</p></div><div><small>Next</small><h4>Project evidence and employability preparation</h4><p>Continuing to build practical skills through projects and technical learning.</p></div></div></section>
+<section id="plan"><h2>Career development plan</h2><p class="sub">My Step 23 plan for an entry-level IT support and networking career.</p>
+<div class="fc-docgrid">
+<div class="card fc-doccard"><span class="fc-livelabel">CAREER DIRECTION</span><h3>IT Support Technician</h3><p><b>Target field:</b> IT Support / Networking. I want to help users diagnose computer and network issues, explain solutions clearly and document them properly.</p></div>
+<div class="card fc-doccard"><span class="fc-livelabel">CURRENT EVIDENCE</span><h3>Skills I can demonstrate</h3><p>Basic PC troubleshooting, Excel data analysis, GitHub version control, a deployed FastAPI/SQLite project, and technical documentation.</p></div>
+<div class="card fc-doccard"><span class="fc-livelabel">LEARNING PRIORITIES</span><h3>Skills to strengthen</h3><p>Independent programming, network diagnostics (TCP/IP, DNS, DHCP), Windows administration, scripting, security practices and user support procedures.</p></div>
+</div>
+<div class="plan" style="margin-top:16px"><div class="card"><strong>6 months</strong><p>Finish verified portfolio evidence, practice structured troubleshooting and interviews, and create a small networking lab report.</p></div><div class="card"><strong>1 year</strong><p>Seek entry-level IT support opportunities, build a knowledge base and study for an introductory support/networking certification.</p></div><div class="card"><strong>3 years</strong><p>Develop into an IT Support / Network Support specialist who can troubleshoot complex issues and communicate with users effectively.</p></div></div>
+<div class="card" style="margin-top:16px"><h3>Learning and certifications I may pursue</h3><p>Windows troubleshooting and system logs, Linux basics, PowerShell scripting, permitted Wireshark labs, SQL, and networking fundamentals. Certifications I may consider include CompTIA A+, Cisco CCST Networking and CompTIA Network+; these are goals, <b>not certifications I claim to hold</b>.</p><div class="fc-doc-actions"><a class="btn p" download="Career_Development_Plan.pdf" href="assets/career-development-plan.pdf">⬇ One-page career plan</a></div></div></section>
+<section id="security"><h2>Cybersecurity case: SQL injection</h2><p class="sub">A defensive look at one of the most common web weaknesses.</p>
+<details open=""><summary>1 · What is the vulnerability?</summary><p>SQL injection happens when text typed by a user becomes part of a database command. The database cannot tell the developer’s command from the user’s input, so an attacker can change what the command does.</p></details>
+<details><summary>2 · How can it happen?</summary><p>It happens when a program builds an SQL query by joining strings together, for example in a login form or a search box. A specially crafted input can change the meaning of the query, so someone could get in without a valid password or see records they should not see.</p></details>
+<details><summary>3 · What are the risks?</summary><p>Logging in without a password, reading private customer or business data, changing or deleting records, and losing the trust of users. For a real business it can also lead to legal trouble, such as under the Data Privacy Act of 2012 in the Philippines.</p></details>
+<details><summary>4 · How can developers prevent it?</summary><p>Use parameterized queries (prepared statements) for every query that includes user input, so the input is always treated as data and never as a command. Also validate input, give the database account only the permissions it needs, hash stored passwords, and hide detailed error messages from users.</p></details>
+<details><summary>5 · What security practices should be implemented?</summary><p>Follow the OWASP Top 10, keep software updated, use HTTPS, keep passwords and secrets out of the code (in environment variables), log failed logins, take regular backups, review code before release, and only ever test on systems you own or have permission to test.</p></details>
+<details><summary>6 · How this applies to GoldenCrust</summary><p>According to the project’s README, GoldenCrust uses parameterized SQL queries, validates input, stores hashed passwords, uses session cookies, and keeps its secrets in an environment file that is not uploaded to GitHub. It is a student project and has not had a professional security review, so more could be added, such as limiting repeated login attempts.</p></details>
+</section>
+<section id="ailog"><h2>AI usage log</h2><p class="sub">Where I used AI, and what I did myself. The purpose is responsible use, not dependence.</p>
+<div class="grid"><div class="card"><h3>Portfolio website</h3><p><b>AI helped:</b> AI wrote the HTML, CSS and JavaScript for the design, animations and layout.</p><p style="margin-top:8px"><b>My part and checks:</b> I chose the style and sections, supplied my information, photo and links, and reviewed each version, asking for changes such as my name, colors and a richer look. The first version used the wrong person’s details, so it was redone with mine.</p></div><div class="card"><h3>Photo background</h3><p><b>AI helped:</b> AI removed the green wall behind my photo using image tools.</p><p style="margin-top:8px"><b>My part and checks:</b> I supplied the photo and reviewed how it looks on the page.</p></div><div class="card"><h3>Resume PDF</h3><p><b>AI helped:</b> AI laid out a one-page resume using only the facts I gave.</p><p style="margin-top:8px"><b>My part and checks:</b> I provided my school years, links and certificate, and I need to make sure every line is true.</p></div><div class="card"><h3>Troubleshooting cases</h3><p><b>AI helped:</b> AI drafted standard cases in the school’s format.</p><p style="margin-top:8px"><b>My part and checks:</b> I read them, asked for easier ones, and confirmed that I can do them. I must be able to explain each one.</p></div><div class="card"><h3>Reflection</h3><p><b>AI helped:</b> AI turned my six short answers into about 600 words.</p><p style="margin-top:8px"><b>My part and checks:</b> The ideas are mine. I review the text so it matches my own words and experience.</p></div><div class="card"><h3>Excel case study page</h3><p><b>AI helped:</b> AI recomputed totals from my Cleaned Data sheet and wrote the page summary. It noticed that some sentences in my interpretation sheet did not match my tables.</p><p style="margin-top:8px"><b>My part and checks:</b> I created the workbook and analysis myself and decided to keep my Excel file as it is.</p></div><div class="card"><h3>Hosting advice</h3><p><b>AI helped:</b> AI explained why GitHub Pages cannot run a FastAPI app and listed deployment steps for a free Python host.</p><p style="margin-top:8px"><b>My part and checks:</b> I deployed GoldenCrust myself and checked that the live link works.</p></div><div class="card"><h3>GoldenCrust project</h3><p><b>AI helped:</b> The project README states that AI tools were used during development.</p><p style="margin-top:8px"><b>My part and checks:</b> I tested the system and deployed it. I need to be ready to explain the code and database.</p></div><div class="card"><h3>Cybersecurity case</h3><p><b>AI helped:</b> AI drafted the SQL injection write-up and linked it to GoldenCrust.</p><p style="margin-top:8px"><b>My part and checks:</b> I read it and must be able to explain it in my own words.</p></div></div>
+<div class="card" style="margin-top:18px"><p><b>What AI helped me accomplish:</b> faster drafts of my website, resume, cases and write-ups.<br/><b>What I verified myself:</b> that my facts, numbers, links and skills are true, and that I can run and explain my project.<br/><b>What I learned:</b> AI gives a quick starting point, but I am responsible for checking every claim before I submit it.<br/><b>Limits and errors I found:</b> the first website draft used someone else’s details, and AI-written cases needed my confirmation and some changes to fit what I can actually do.</p></div><div class="card" style="margin-top:18px"><h3>Dated AI-assistance and verification timeline</h3><p class="sub" style="margin-bottom:12px">Examples of how I used AI tools and checked the results during coursework and portfolio development.</p><div style="overflow-x:auto"><table class="fc-evidencetable"><thead><tr><th>Date</th><th>Task</th><th>Verification or limitation</th></tr></thead><tbody><tr><td>2026-10-20</td><td>Customer ordering extension</td><td>Source archive contains proposed routes, frontend and test documentation; verify against actual code.</td></tr><tr><td>2026-10-27</td><td>Git &amp; GitHub workflow</td><td>Terminal screenshots confirm successful pushes and an up-to-date branch.</td></tr><tr><td>2026-10-28</td><td>Render deployment</td><td>The service was shown as Live, with successful page and login HTTP 200 logs.</td></tr><tr><td>2026-10-28</td><td>End-to-end order</td><td>Student reported successfully placing an order through the public customer shop.</td></tr><tr><td>2026-10-29</td><td>Portfolio and data audit</td><td>Corrected a separate spreadsheet copy and documented verified data totals; original file preserved.</td></tr></tbody></table></div><div class="fc-doc-actions"><a class="btn" download="AI_Usage_Log_Dated.md" href="assets/ai-usage-log-dated.md">⬇ Full responsible AI log</a></div></div></section>
+<section id="reflection"><h2>Reflection</h2><p class="sub">My journey through the BSIT program.</p>
+<div class="card" style="padding:30px"><h3 style="margin:0 0 6px;font-size:18px;color:var(--ac2)">Before BSIT</h3><p style="font-size:15.5px;line-height:1.75">Before I entered BSIT, my understanding of IT was simple. I knew that IT stands for Information Technology and that it is about computers. I was interested in computers, and that interest is the reason I chose to take BSIT. At that time I did not yet know how wide the field is, or how much practical problem-solving it involves, but I knew I wanted to learn more about it and be part of it.</p><h3 style="margin:22px 0 6px;font-size:18px;color:var(--ac2)">What I learned</h3><p style="font-size:15.5px;line-height:1.75">The most important thing I learned in BSIT is that technology is the future, and that I need to get used to it. Technology keeps changing, and the people who keep learning are the ones who stay ready. This changed the way I look at my studies. Learning IT is not only about passing subjects. It is about preparing myself for a world that depends more and more on technology, where being comfortable with it is becoming a basic requirement for almost any kind of work.</p><h3 style="margin:22px 0 6px;font-size:18px;color:var(--ac2)">The project that taught me the most</h3><p style="font-size:15.5px;line-height:1.75">The project that taught me the most was making a website. It was hard, and it showed me that you really need to put effort into it. A website does not become good by accident. You have to plan what you want to show, build it piece by piece, check how it looks, and keep improving it. That experience taught me patience and the value of continuing to work on something until it is done properly. It also helped me understand that every page people see online is the result of someone's careful work.</p><h3 style="margin:22px 0 6px;font-size:18px;color:var(--ac2)">My biggest technical difficulty</h3><p style="font-size:15.5px;line-height:1.75">The hardest technical problem for me was a network connectivity issue. At the time, I did not know much about it, and that is why it was difficult. I could see that something was wrong, but I did not know where to start looking. Since then, I have learned that the answer is to work step by step. Now I know to check the simple things first, such as the cables, the power and the Wi-Fi settings, before looking for harder causes. Writing my troubleshooting cases helped me turn that experience into a clear process that I can repeat and explain to other people.</p><h3 style="margin:22px 0 6px;font-size:18px;color:var(--ac2)">How my skills changed and what I still need to improve</h3><p style="font-size:15.5px;line-height:1.75">My skills have changed from simply being interested in computers to being able to approach a problem in an organized way. I can now clean and analyze data in Excel, document a problem from its symptoms to its solution, and use GitHub, which I practiced in my webinar. The skill I most need to improve is my programming skill. Programming is important in almost every area of IT, and even in IT support it helps with automating tasks and understanding how software behaves. I plan to give it more regular practice so that it becomes as strong as my other skills.</p><h3 style="margin:22px 0 6px;font-size:18px;color:var(--ac2)">The IT professional I want to become</h3><p style="font-size:15.5px;line-height:1.75">I want to become an IT support professional. I want to be the person who stays calm when something stops working, finds the real cause of the problem, and explains the solution in a way the user can understand. Good IT support is not only technical knowledge. It also needs patience, clear communication, and respect for the person who is asking for help. These are the qualities I want to keep building.</p><h3 style="margin:22px 0 6px;font-size:18px;color:var(--ac2)">Why I am ready to begin</h3><p style="font-size:15.5px;line-height:1.75">I am not finished learning, and I know there is a lot more to study. But I am ready to begin my career because I have a foundation I can show with evidence: five documented troubleshooting cases, a data analysis case study, a certificate from a GitHub webinar, and a portfolio that I built myself. Most importantly, I understand that technology keeps changing, and I am willing to keep learning with it.</p></div></section>
+<section id="interview">
+<h2>Mock job interview</h2>
+<p class="sub">Practice for a simulated IT job interview, using the 12 questions from the Idnar Legends portfolio guidelines. Answers are based on my projects, technical skills, troubleshooting cases, and career goals.</p>
+<div class="card gc-interview-intro">
+<strong>Interview preparation:</strong> Introduce myself → Describe a skill or experience → Give a real example → Explain what I learned or want to improve.
+    <p>These are sample spoken answers. I will practice them naturally, and only claim skills or experiences that I can explain.</p>
+</div>
+<div class="card interview-recording">
+<div class="recording-head"><div><span class="lvl">Recorded interview</span><h3>My Simulated IT Job Interview</h3><p>A recorded mock interview based on the employability questions in Step 21 of the portfolio guidelines.</p></div><span class="recording-duration">4 min 44 sec</span></div>
+<div class="video-shell"><video aria-label="Recorded mock IT job interview" controls="" playsinline="" poster="assets/mock-interview-poster.jpg" preload="metadata"><source src="assets/mock-interview.mp4" type="video/mp4"/>Your browser does not support embedded video.</video></div>
+<p class="evidence-note">Recorded on October 28, 2026. Video is included in this portfolio file so it also works when uploaded as a single index.html.</p>
+</div><div class="gc-interview-grid">
+<details class="gc-interview-item" open="">
+<summary><span class="gc-q-number">01</span><span>Tell me about yourself.</span></summary>
+<p>I am a BSIT graduate from Datamex College of Saint Adeline, and I am interested in IT support and networking. My portfolio includes an inventory and ordering web application, an Excel equipment analysis, and five basic troubleshooting case studies. I enjoy solving computer problems step by step and explaining the solution clearly.</p>
+</details>
+<details class="gc-interview-item">
+<summary><span class="gc-q-number">02</span><span>Why did you choose BSIT?</span></summary>
+<p>I chose BSIT because I was interested in computers and wanted to understand how technology works. During my studies, I learned that IT involves not only programming but also data, networks, troubleshooting, and helping users. Those experiences helped me discover my interest in IT support.</p>
+</details>
+<details class="gc-interview-item">
+<summary><span class="gc-q-number">03</span><span>What are your strongest IT skills?</span></summary>
+<p>My strongest beginner-level skills are basic computer troubleshooting, Excel data analysis, and using Git and GitHub. I have documented five troubleshooting cases, analyzed school equipment records using formulas and charts, and uploaded my projects to GitHub. I am still developing these skills through practice.</p>
+</details>
+<details class="gc-interview-item">
+<summary><span class="gc-q-number">04</span><span>What is your weakest skill?</span></summary>
+<p>Programming is the technical skill I most need to improve. I have worked with a Python FastAPI project, but I want to become more confident writing and understanding code independently. To improve, I review the code I use, practice small tasks, and test what I build.</p>
+</details>
+<details class="gc-interview-item">
+<summary><span class="gc-q-number">05</span><span>Tell us about your major project.</span></summary>
+<p>My major project is Golden Crust, a bakery inventory, sales, and customer pickup-ordering system. Customers can browse products and place orders, while the admin manages products, stock, orders, and reports. The system uses Python, FastAPI, SQLite, HTML, CSS, and JavaScript. I worked on development, testing, database verification, and documentation, and deployed a public demo using Render.</p>
+</details>
+<details class="gc-interview-item">
+<summary><span class="gc-q-number">06</span><span>What was your biggest technical problem?</span></summary>
+<p>One of my biggest technical challenges was a network connectivity problem. At first, I did not know where to begin diagnosing it. My portfolio reflection explains how that experience showed me the importance of checking possible causes in a clear order instead of guessing.</p>
+</details>
+<details class="gc-interview-item">
+<summary><span class="gc-q-number">07</span><span>How did you solve it?</span></summary>
+<p>I learned to check the simple causes first, such as power, cables, Wi-Fi settings, and airplane mode. In my documented Wi-Fi troubleshooting case, I checked the connection settings, turned off airplane mode, enabled Wi-Fi, and reconnected. I then recorded the problem, checks, solution, and lesson learned.</p>
+</details>
+<details class="gc-interview-item">
+<summary><span class="gc-q-number">08</span><span>How do you handle deadlines?</span></summary>
+<p>I handle deadlines by listing what needs to be done, dividing the work into smaller tasks, and completing the important functions first. After that, I allow time for testing and documentation. If a task becomes difficult, I ask for help or inform my teammates early instead of leaving the problem until the deadline.</p>
+</details>
+<details class="gc-interview-item">
+<summary><span class="gc-q-number">09</span><span>How do you work with a team?</span></summary>
+<p>I believe teamwork needs clear tasks, communication, and respect for other people's ideas. In our Golden Crust group project, I worked with two teammates, and my contribution included development, testing, database checks, and documentation. I would share progress, listen to feedback, and help test the final work.</p>
+</details>
+<details class="gc-interview-item">
+<summary><span class="gc-q-number">10</span><span>Why should an organization consider hiring you?</span></summary>
+<p>An organization should consider me because I am willing to learn, patient when solving problems, and careful about checking my work. My portfolio shows practical examples, including troubleshooting cases, Excel analysis, and a working web application. I know I still have more to learn, but I am ready to improve through real experience.</p>
+</details>
+<details class="gc-interview-item">
+<summary><span class="gc-q-number">11</span><span>What technology are you currently learning?</span></summary>
+<p>I am currently studying networking basics such as TCP/IP, DNS, DHCP, and subnetting, along with Windows troubleshooting. I am also practicing Git, GitHub, and programming fundamentals. These are part of the learning roadmap shown in my portfolio.</p>
+</details>
+<details class="gc-interview-item">
+<summary><span class="gc-q-number">12</span><span>Where do you want to develop professionally?</span></summary>
+<p>I want to start in IT support and continue developing toward networking or systems support. My goal is to become someone who can identify problems, support users, and explain solutions clearly. In the future, I hope to strengthen my networking skills and work toward certifications such as CompTIA A+ or Network+.</p>
+</details>
+</div>
+<div class="card" style="margin-top:18px"><h3>Technical interview practice</h3><p>Practice the basic concepts in my own words. These topics are related to the projects and IT support specialization.</p><details><summary>Explain CRUD, the API and the database</summary><p>CRUD means Create, Read, Update and Delete. The browser sends requests to FastAPI routes; the backend checks rules and uses SQL to read or change related SQLite data. An API is the interface between the frontend and the server.</p></details><details><summary>Explain SQL injection and safer queries</summary><p>SQL injection happens when unsafe user input becomes part of a SQL command. Parameterized queries keep user data separate from the SQL statement; they are one of several essential safeguards.</p></details><details><summary>Describe a network troubleshooting approach</summary><p>Start with physical power/cables, Wi-Fi or Ethernet connection, IP addressing, local network, DNS, and internet connectivity. Change one factor at a time and record results.</p></details><details><summary>Explain local hosting vs cloud deployment</summary><p>Localhost runs on my own laptop. Render hosts the application independently, so closing VS Code does not shut down the cloud service. Its free storage is temporary.</p></details><div class="fc-doc-actions">{btn(D/'Technical_Interview_Reviewer.md','⬇ Full 15-question reviewer','text/markdown')}</div></div></section>
+<section class="contact" id="contact"><div class="card"><h2>Let's connect</h2><p class="sub">Open to IT support and networking opportunities.</p>
+<div class="btns" style="justify-content:center"><a class="btn p" href="mailto:FerickCortezo25@gmail.com">✉️ Email me</a><a class="btn" href="https://www.linkedin.com/in/ferick-cortizo-611423443/" rel="noopener" target="_blank">LinkedIn</a><a class="btn" href="https://github.com/Frostner" rel="noopener" target="_blank">GitHub</a></div></div></section>
+<footer>© 2026 Ferick Cortizo · Datamex College of Saint Adeline</footer>
+<script>
+(function(){var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var bar=document.getElementById('bar');
+addEventListener('scroll',function(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?h.scrollTop/m*100:0)+'%'},{passive:true});
+var s=document.querySelectorAll('section:not(.hero)');
+if('IntersectionObserver' in window&&!rm){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});s.forEach(function(el){el.classList.add('rv');io.observe(el)})}
+var w=['IT support','networking','troubleshooting','Git and GitHub'],i=0,j=0,d=false,t=document.getElementById('ty');
+function tick(){var f=w[i];if(!d){j++;t.textContent=f.slice(0,j);if(j==f.length){d=true;return setTimeout(tick,1400)}}else{j--;t.textContent=f.slice(0,j);if(j==0){d=false;i=(i+1)%w.length}}setTimeout(tick,d?40:80)}
+if(t){if(rm)t.textContent=w[0];else tick()}
+if(!('IntersectionObserver' in window)||rm)s.forEach(function(el){el.classList.add('in')});
+function cnt(el){var n=+el.dataset.n,st=null;function f(ts){st=st||ts;var p=Math.min((ts-st)/1200,1);el.textContent=Math.round(n*p);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+if(!rm&&'IntersectionObserver' in window){var co=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){cnt(x.target);co.unobserve(x.target)}})});document.querySelectorAll('[data-n]').forEach(function(c){co.observe(c)})}
+var cv=document.getElementById('net');
+if(cv&&!rm){var cx=cv.getContext('2d'),P=[],W,H;var rs=function(){W=cv.width=innerWidth;H=cv.height=innerHeight};rs();addEventListener('resize',rs);
+var N=Math.min(60,Math.floor(innerWidth/22));for(var k=0;k<N;k++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.5,vy:(Math.random()-.5)*.5});
+var dr=function(){cx.clearRect(0,0,W,H);for(var a=0;a<P.length;a++){var p=P[a];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;cx.fillStyle='#22d3ee';cx.beginPath();cx.arc(p.x,p.y,1.8,0,6.3);cx.fill();for(var b=a+1;b<P.length;b++){var q=P[b],dx=p.x-q.x,dy=p.y-q.y,d=dx*dx+dy*dy;if(d<19000){cx.strokeStyle='rgba(129,140,248,'+(1-d/19000)*.6+')';cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke()}}}requestAnimationFrame(dr)};dr()}
+if(!rm){var gl=document.getElementById('glow');addEventListener('mousemove',function(e){gl.style.left=e.clientX+'px';gl.style.top=e.clientY+'px'});
+document.querySelectorAll('.grid .card').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(700px) rotateY('+x*8+'deg) rotateX('+(-y*8)+'deg) translateY(-4px)'});c.addEventListener('mouseleave',function(){c.style.transform=''})})}
+})();
+</script>
+<a href="#" id="top">↑</a>
+<script>
+(function(){var L=document.querySelectorAll('.l a'),S=[].map.call(L,function(a){return document.querySelector(a.getAttribute('href'))}),t=document.getElementById('top');
+addEventListener('scroll',function(){t.classList.toggle('show',scrollY>600);var y=scrollY+140,c=-1;S.forEach(function(s,i){if(s&&s.offsetTop<=y)c=i});L.forEach(function(a,i){a.classList.toggle('on',i===c)})},{passive:true})})();
+</script>
+<dialog aria-label="Project screenshot preview" class="gc-gallery-dialog" id="gc-gallery-dialog">
+<header><b id="gc-dialog-title">Project screenshot</b><button aria-label="Close screenshot" id="gc-gallery-close" type="button">×</button></header>
+<img alt="Full size project screenshot" id="gc-gallery-image"/>
+<p id="gc-gallery-caption"></p>
+<a class="gc-img-original" href="#" id="gc-gallery-original" rel="noopener" target="_blank">Open original image in new tab for zooming</a>
+</dialog>
+<script>
+(function(){
+  const dlg=document.getElementById('gc-gallery-dialog'), img=document.getElementById('gc-gallery-image'), original=document.getElementById('gc-gallery-original');
+  if(!dlg||!dlg.showModal)return;
+  document.querySelectorAll('[data-gc-shot]').forEach(function(button){
+    button.addEventListener('click',function(){
+      const photo=button.querySelector('img'),title=button.querySelector('strong'),subtitle=button.querySelector('small');
+      img.src=photo.src; img.alt=photo.alt;
+      original.href=photo.src;
+      document.getElementById('gc-dialog-title').textContent=title.textContent;
+      document.getElementById('gc-gallery-caption').textContent=subtitle.textContent;
+      dlg.showModal();
+    });
+  });
+  document.getElementById('gc-gallery-close').addEventListener('click',()=>dlg.close());
+  dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+  dlg.addEventListener('close',()=>{img.removeAttribute('src');original.href='#'});
+})();
+</script>
+</body>
+</html>
